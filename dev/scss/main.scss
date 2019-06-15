@@ -6,31 +6,123 @@ body{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  user-select: none;
   background-image: linear-gradient(to bottom, #66373d, #66373d, #905465, #b87392, #ffbcff);
-  background-image: linear-gradient(to bottom, #9052a0, #ce6e91, #ea9d8f, #f4cfaa, #fefedf);
+  /*background-image: linear-gradient(to bottom, #9052a0, #ce6e91, #ea9d8f, #f4cfaa, #fefedf);*/
 }
-#rocket{
-  height: 26vh;
-  width: auto;
+
+//Variable to add length of animation(second part in JS)
+:root{
+  --scrren-height: 1000px;
 }
-.internal-line, .external-line{
-  height: 50vh;
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translate(-50%, 0);
-}
-.internal-line{
-  background-color: rgba(11, 192, 221, 0.3);
-  width: 5vh;
-  z-index: -1;
-}
-.external-line{
-  background-color: rgba(255, 26, 36, 0.3);
-  width: 8vh;
-  z-index: -2;
-}
+
+//Spaceship
 .object{
   position: relative;
   transform: translate(-60%, -20%);
+  #rocket{
+    height: 26vh;
+    width: auto;
+  }
+  .internal-line, .external-line{
+    height: 50vh;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .internal-line{
+    background-color: rgba(11, 192, 221, 0.3);
+    width: 5vh;
+    z-index: -1;
+  }
+  .external-line{
+    background-color: rgba(255, 26, 36, 0.3);
+    width: 8vh;
+    z-index: -2;
+  }
+}
+
+//Background
+.backgrounds{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../icons/stars.svg");
+  background-size: 100%;
+  background-position: top;
+  animation: stars 110s linear infinite;
+  .element{
+    position: absolute;
+    height: auto;
+  }
+
+  //Orange planets
+  .planet{
+    right: 15vw;
+    width: 25%;
+    top: 0;
+    z-index: -2;
+    animation: clouds 7s linear infinite;
+  }
+  .planet-1{
+    left: 15vw;
+    width: 5%;
+    top: 0;
+    z-index: -2;
+    animation: clouds 15s linear infinite;
+  }
+
+  //bright red planets
+  .planet-2{
+    left: 2vw;
+    width: 10%;
+    top: 0;
+    z-index: -3;
+    animation: clouds 12s linear infinite;
+  }
+  .planet-3{
+    left: 25vw;
+    width: 7%;
+    top: 0;
+    z-index: -3;
+    animation: clouds 17s linear infinite;
+  }
+  .planet-4{
+    right: 1vw;
+    width: 7%;
+    top: 0;
+    z-index: -3;
+    animation: clouds 22s linear infinite;
+  }
+
+  //Clouds
+  .cloud{
+    width: 40%;
+    z-index: -5;
+    right: -5vw;
+    top: 0;
+    animation: clouds 6s linear infinite;
+  }
+  .cloud-2{
+    width: 60%;
+    left: -5vw;
+    z-index: -6;
+    top:  0;
+    animation: clouds 13s linear infinite;
+    transform: translateY(-200%);
+    animation-delay: 4s;
+  }
+}
+
+@-webkit-keyframes stars {
+  from { background-position: 0 0; }
+  to { background-position: 0 7000px; }
+}
+@-webkit-keyframes clouds {
+  0% { margin-top: 0;transform: translateY(-200%);}
+  100% { margin-top: var(--scrren-height);transform: translateY(10%); }
 }

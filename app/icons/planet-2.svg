@@ -1,0 +1,18 @@
+<svg id="planet-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="298.356" height="298.356" viewBox="0 0 298.356 298.356">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Oval_3" data-name="Oval 3" cx="65.804" cy="65.804" r="65.804" transform="translate(83.146 83.621)" fill="#e73f71"/>
+    </clipPath>
+  </defs>
+  <circle id="Oval_5_Copy_2" data-name="Oval 5 Copy 2" cx="149.178" cy="149.178" r="149.178" transform="translate(0 0)" fill="rgba(231,63,113,0.09)"/>
+  <circle id="Oval_5_Copy" data-name="Oval 5 Copy" cx="110.63" cy="110.63" r="110.63" transform="translate(38.485 38.485)" fill="rgba(231,63,113,0.33)"/>
+  <circle id="Oval_5" data-name="Oval 5" cx="87.184" cy="87.184" r="87.184" transform="translate(61.766 62.716)" fill="rgba(231,63,113,0.44)"/>
+  <circle id="Oval_3-2" data-name="Oval 3" cx="65.804" cy="65.804" r="65.804" transform="translate(83.146 83.621)" fill="#e73f71"/>
+  <g id="planet-2-2" data-name="planet-2" clip-path="url(#clip-path)">
+    <circle id="Oval_4" data-name="Oval 4" cx="19.113" cy="19.113" r="19.113" transform="translate(149.187 111.178)" fill="#d02155"/>
+    <circle id="Oval_4_Copy" data-name="Oval 4 Copy" cx="7.527" cy="7.527" r="7.527" transform="translate(160.59 158.215)" fill="#d02155"/>
+    <circle id="Oval_4_Copy_2" data-name="Oval 4 Copy 2" cx="11.136" cy="11.136" r="11.136" transform="translate(135.884 175.319)" fill="#d02155"/>
+    <circle id="Oval_4_Copy_3" data-name="Oval 4 Copy 3" cx="5.77" cy="5.77" r="5.77" transform="translate(124.956 138.26)" fill="#d02155"/>
+    <circle id="Oval_4_Copy_4" data-name="Oval 4 Copy 4" cx="11.051" cy="11.051" r="11.051" transform="translate(80.295 115.929)" fill="#d02155"/>
+  </g>
+</svg>
