@@ -10,7 +10,12 @@ body{
   background-image: linear-gradient(to bottom, #66373d, #66373d, #905465, #b87392, #ffbcff);
   /*background-image: linear-gradient(to bottom, #9052a0, #ce6e91, #ea9d8f, #f4cfaa, #fefedf);*/
 }
-
+#canvas{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 111;
+}
 //Variable to add length of animation(second part in JS)
 :root{
   --scrren-height: 1000px;
@@ -21,10 +26,10 @@ body{
   position: relative;
   transform: translate(-60%, -20%);
   #rocket{
-    height: 26vh;
+    height: 200px;
     width: auto;
   }
-  .internal-line, .external-line{
+  /*.internal-line, .external-line{
     height: 50vh;
     position: absolute;
     top: 90%;
@@ -40,6 +45,14 @@ body{
     background-color: rgba(255, 26, 36, 0.3);
     width: 8vh;
     z-index: -2;
+  }*/
+  #canvas{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: -1;
+    background-color: transparent;
   }
 }
 
@@ -118,6 +131,7 @@ body{
   }
 }
 
+//Animations
 @-webkit-keyframes stars {
   from { background-position: 0 0; }
   to { background-position: 0 7000px; }
