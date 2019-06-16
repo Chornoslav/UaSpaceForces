@@ -11,85 +11,96 @@ canvas.width = 70;
 canvas.height = window.innerHeight / 2;
 var c = canvas.getContext('2d');
 
-// function Circle(x, y, dx, dy, rad) {
-//     this.x = 100;
-//     this.dx = dx;
-//     this.y = 100;
-//     this.dy = dy;
-//     this.rad = rad;
-//
-//
-//     this.draw = function () {
-//         c.beginPath();
-//         c.arc( this.x, this.y, this.rad, Math.PI*2, false);
-//         c.strokeStyle = 'red';
-//         c.fillStyle = 'red';
-//         c.fill();
-//         c.stroke();
-//     };
-//
-//     this.update = function () {
-//         if(this.x + this.rad > innerWidth || this.x  - this.rad < 0){
-//             this.dx = -this.dx;
-//         }
-//         if(this.y + this.rad > innerHeight || this.y  - this.rad < 0){
-//             this.dy = -this.dy;
-//         }
-//         this.x += this.dx;
-//         this.y += this.dy;
-//
-//         this.draw();
-//     };
-// }
-//
-// var circleArray = [];
-//
-// function init() {
-//     circleArray = [];
-//     var elementsNumber = 5;
-//
-//     for (i = 0; i < elementsNumber; i++) {
-//         var rad = Math.random() * 10 + 2;
-//         //coordinates
-//         var x = Math.random() * (innerWidth - rad * 2);
-//         var y = 600;
-//         //velocity
-//         var dx = (Math.random() - 0.5) * 0.8;
-//         var dy = (Math.random() - 0.5) * 0.8;
-//
-//         circleArray.push(new Circle(x, y, dx, dy, rad));
-//     }
-// }
-// init();
-var x = 20;
-var x1 = 40;
+var horizontal = [10, 60, 35, 22, 48];
+var vertical = 0;
+
+var x = horizontal[0];
+var x1 = horizontal[1];
+//orange
+var x2 = horizontal[2];
+//semi Orange
+var x3 = horizontal[3];
+var x4 = horizontal[4];
+
 var y = 0;
 var y1 = 0;
+var y2 = 0;
+var y3 = 0;
+var y4 = 0;
+
+var baseVelocity = 4;
 
 function animate() {
     requestAnimationFrame(animate);
-    //c.clearRect(0, 0, canvas.width, canvas.height);
-    c.fillStyle = 'rgba(255, 255, 255, 0.035)';
+    c.fillStyle = 'rgba(255, 188, 255, 0.01)';
     c.fillRect( 0, 0, canvas.width, canvas.height);
+
     c.beginPath();
-    c.arc( x, y, 20, Math.PI*2, false);
-    c.arc( x1, y1, 20, Math.PI*2, false);
-    c.strokeStyle = 'red';
-    c.fillStyle = 'red';
+    c.arc(x, y, 10, Math.PI * 2, false);
+    c.strokeStyle = 'rgb(236, 220, 9)';
+    c.fillStyle = 'rgb(236, 220, 9)';
     c.fill();
     c.stroke();
-
+    c.closePath();
     if(y > canvas.height){
-        x = 20;
-        x1 = 40;
-        y = 0;
-        y1 = 0;
+        x = horizontal[0];
+        y = vertical;
     }
+    y += 5 + baseVelocity;
 
-    y += 10;
-    y1 += 1;
+    c.beginPath();
+    c.arc( x1, y1, 10, Math.PI*2, false);
+    c.strokeStyle = 'rgb(242, 182, 64)';
+    c.fillStyle = 'rgb(242, 182, 64)';
+    c.fill();
+    c.stroke();
+    c.closePath();
+    if(y1 > canvas.height){
+        x1 = horizontal[1];
+        y1 = vertical;
+    }
+    y1 += 6 + baseVelocity;
 
+    //orange
+    c.beginPath();
+    c.arc( x2, y2, 10, Math.PI*2, false);
+    c.strokeStyle = 'rgb(238, 138, 3)';
+    c.fillStyle = 'rgb(238, 138, 3)';
+    c.fill();
+    c.stroke();
+    c.closePath();
+    if(y2 > canvas.height){
+        x2 = horizontal[2];
+        y2 = vertical;
+    }
+    y2 += 8 + baseVelocity;
+
+    //semi-Orange
+    c.beginPath();
+    c.arc( x3, y3, 16, Math.PI*2, false);
+    c.strokeStyle = 'rgb(248, 182, 64)';
+    c.fillStyle = 'rgb(248, 182, 64)';
+    c.fill();
+    c.stroke();
+    c.closePath();
+    if(y3 > canvas.height){
+        x3 = horizontal[3];
+        y3 = vertical;
+    }
+    y3 += 4 + baseVelocity;
+
+    //semi-Orange
+    c.beginPath();
+    c.arc( x4, y4, 16, Math.PI*2, false);
+    c.strokeStyle = 'rgb(245, 166, 35)';
+    c.fillStyle = 'rgb(245, 166, 35)';
+    c.fill();
+    c.stroke();
+    c.closePath();
+    if(y4 > canvas.height){
+        x4 = horizontal[4];
+        y4 = vertical;
+    }
+    y4 += 5 + baseVelocity;
 }
-
 animate();
-

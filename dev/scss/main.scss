@@ -7,6 +7,7 @@ body{
   align-items: center;
   flex-direction: column;
   user-select: none;
+  //add background animation
   background-image: linear-gradient(to bottom, #66373d, #66373d, #905465, #b87392, #ffbcff);
   /*background-image: linear-gradient(to bottom, #9052a0, #ce6e91, #ea9d8f, #f4cfaa, #fefedf);*/
 }
@@ -29,23 +30,6 @@ body{
     height: 200px;
     width: auto;
   }
-  /*.internal-line, .external-line{
-    height: 50vh;
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, 0);
-  }
-  .internal-line{
-    background-color: rgba(11, 192, 221, 0.3);
-    width: 5vh;
-    z-index: -1;
-  }
-  .external-line{
-    background-color: rgba(255, 26, 36, 0.3);
-    width: 8vh;
-    z-index: -2;
-  }*/
   #canvas{
     position: absolute;
     top: 90%;
