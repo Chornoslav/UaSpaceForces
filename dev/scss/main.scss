@@ -8,8 +8,12 @@ body{
   flex-direction: column;
   user-select: none;
   //add background animation
-  background-image: linear-gradient(to bottom, #66373d, #66373d, #905465, #b87392, #ffbcff);
+  //background-image: linear-gradient(to bottom, #66373d, #66373d, #905465, #b87392, #ffbcff);
   /*background-image: linear-gradient(to bottom, #9052a0, #ce6e91, #ea9d8f, #f4cfaa, #fefedf);*/
+  background: linear-gradient(180deg, #66373d, #905465, #b87392, #ffbcff, #9052a0, #ce6e91, #ea9d8f);
+  background-size: 1800% 1800%;
+  -webkit-animation: back 47s ease infinite;
+  animation: back 55s ease infinite;
 }
 #canvas{
   position: absolute;
@@ -123,4 +127,14 @@ body{
 @-webkit-keyframes clouds {
   0% { margin-top: 0;transform: translateY(-200%);}
   100% { margin-top: var(--scrren-height);transform: translateY(10%); }
+}
+@-webkit-keyframes back {
+  0%{background-position:51% 0}
+  50%{background-position:50% 100%}
+  100%{background-position:51% 0}
+}
+@keyframes back {
+  0%{background-position:51% 0}
+  50%{background-position:50% 100%}
+  100%{background-position:51% 0}
 }
