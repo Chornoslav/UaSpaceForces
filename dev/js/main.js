@@ -28,25 +28,28 @@ var y2 = 0;
 var y3 = 0;
 var y4 = 0;
 
-var baseVelocity = 4;
+var baseVelocity = 2;
+var mHeight = 0.8;
 
 function animate() {
     requestAnimationFrame(animate);
-    c.fillStyle = 'rgba(255, 188, 255, 0.01)';
+    c.fillStyle = 'rgba(251, 236, 27, 0.08)';
     c.fillRect( 0, 0, canvas.width, canvas.height);
+    c.fillStyle = 'rgba(245, 21, 21, 0.08)';
+    c.fillRect( 18, 0, 34, canvas.height);
 
     c.beginPath();
     c.arc(x, y, 10, Math.PI * 2, false);
-    c.strokeStyle = 'rgb(236, 220, 9)';
-    c.fillStyle = 'rgb(236, 220, 9)';
+    c.strokeStyle = 'rgb(242, 182, 64)';
+    c.fillStyle = 'rgb(242, 182, 64)';
     c.fill();
     c.stroke();
     c.closePath();
-    if(y > canvas.height){
+    if(y > mHeight * canvas.height/3.5){
         x = horizontal[0];
         y = vertical;
     }
-    y += 5 + baseVelocity;
+    y += 4 + baseVelocity;
 
     c.beginPath();
     c.arc( x1, y1, 10, Math.PI*2, false);
@@ -55,25 +58,25 @@ function animate() {
     c.fill();
     c.stroke();
     c.closePath();
-    if(y1 > canvas.height){
+    if(y1 > mHeight * canvas.height/2.5){
         x1 = horizontal[1];
         y1 = vertical;
     }
-    y1 += 6 + baseVelocity;
+    y1 += 5 + baseVelocity;
 
     //orange
     c.beginPath();
     c.arc( x2, y2, 10, Math.PI*2, false);
-    c.strokeStyle = 'rgb(238, 138, 3)';
-    c.fillStyle = 'rgb(238, 138, 3)';
+    c.strokeStyle = 'rgb(248, 182, 64)';
+    c.fillStyle = 'rgb(248, 182, 64)';
     c.fill();
     c.stroke();
     c.closePath();
-    if(y2 > canvas.height){
+    if(y2 > mHeight * canvas.height*3/4){
         x2 = horizontal[2];
         y2 = vertical;
     }
-    y2 += 8 + baseVelocity;
+    y2 += 7 + baseVelocity;
 
     //semi-Orange
     c.beginPath();
@@ -83,7 +86,7 @@ function animate() {
     c.fill();
     c.stroke();
     c.closePath();
-    if(y3 > canvas.height){
+    if(y3 > mHeight * canvas.height*3.5/5){
         x3 = horizontal[3];
         y3 = vertical;
     }
@@ -97,7 +100,7 @@ function animate() {
     c.fill();
     c.stroke();
     c.closePath();
-    if(y4 > canvas.height){
+    if(y4 > mHeight * canvas.height*3/5){
         x4 = horizontal[4];
         y4 = vertical;
     }
