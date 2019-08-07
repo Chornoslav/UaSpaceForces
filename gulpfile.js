@@ -34,7 +34,7 @@ gulp.task('concat', ['sass'], function () {
 });
 
 /* purify css */
-gulp.task('build', function() {
+gulp.task('build', ['concat'], function() {
     return gulp.src('app/css/bundle.css')
         .pipe(purify(['app/index.html'], { minify: true }))
         .pipe(gulp.dest('app/css/'));
